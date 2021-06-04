@@ -1,4 +1,4 @@
-package com.example.a10118392uts;
+package com.example.a10118392uts.activity;
 /*
  * Tanggal pengerjaan : 3 Juni 2021
  * Nim                : 10118392
@@ -17,6 +17,9 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.a10118392uts.MainActivity;
+import com.example.a10118392uts.R;
+import com.example.a10118392uts.helper.SQLiteHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Calendar;
@@ -52,7 +55,8 @@ public class EditActivity extends AppCompatActivity {
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                                et_tanggal.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                                String date=String.format("%d-%02d-%02d ", year,dayOfMonth+1,dayOfMonth);
+                                et_tanggal.setText(date);
                             }
                         }, year, month, day);
                 picker.show();
@@ -105,7 +109,7 @@ public class EditActivity extends AppCompatActivity {
                     if(isUpdate){
                         Toast.makeText(EditActivity.this,"Data berhasil disimpan",Toast.LENGTH_SHORT).show();
                         kosong();
-                        startActivity(new Intent(EditActivity.this,MainActivity.class));
+                        startActivity(new Intent(EditActivity.this, MainActivity.class));
                         finish();
                     }else {
                         Toast.makeText(EditActivity.this,"Data gagal disimpan",Toast.LENGTH_SHORT).show();

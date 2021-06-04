@@ -1,11 +1,10 @@
-package com.example.a10118392uts;
+package com.example.a10118392uts.activity;
 /*
  * Tanggal pengerjaan : 3 Juni 2021
  * Nim                : 10118392
  * Nama               : Raden Arvin Rizky A
  * Kelas              : IF-9
  * */
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -15,9 +14,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.a10118392uts.MainActivity;
+import com.example.a10118392uts.R;
+import com.example.a10118392uts.helper.SQLiteHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import org.w3c.dom.Text;
 
 import java.util.Date;
 
@@ -66,7 +66,7 @@ public class InputActivity extends AppCompatActivity {
                     if(isInsert){
                         Toast.makeText(InputActivity.this,"Data berhasil disimpan",Toast.LENGTH_SHORT).show();
                         kosong();
-                        startActivity(new Intent(InputActivity.this,MainActivity.class));
+                        startActivity(new Intent(InputActivity.this, MainActivity.class));
                         finish();
                     }else {
                         Toast.makeText(InputActivity.this,"Data gagal disimpan",Toast.LENGTH_SHORT).show();

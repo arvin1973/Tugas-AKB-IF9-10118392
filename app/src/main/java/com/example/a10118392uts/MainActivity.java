@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.a10118392uts.fragment.CatatanFragment;
+import com.example.a10118392uts.fragment.InfoFragment;
+import com.example.a10118392uts.fragment.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 /*
  * Tanggal pengerjaan : 2 Juni 2021

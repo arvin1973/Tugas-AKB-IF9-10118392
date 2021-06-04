@@ -1,8 +1,12 @@
-package com.example.a10118392uts;
+package com.example.a10118392uts.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.a10118392uts.MainActivity;
+import com.example.a10118392uts.R;
+
 /*
 * Tanggal pengerjaan : 2 Juni 2021
 * Nim                : 10118392

@@ -1,4 +1,4 @@
-package com.example.a10118392uts;
+package com.example.a10118392uts.helper;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -56,7 +56,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     public Cursor getDataAll(){
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.rawQuery("SELECT * FROM "+NAMA_TABLE,null);
+        return db.rawQuery("SELECT * FROM "+NAMA_TABLE+" ORDER BY "+COL2,null);
     }
 
 
@@ -73,5 +73,10 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.update(NAMA_TABLE,values,COL1+" = ? ",new String[]{id});
         return true;
 
+    }
+
+    public Integer deteleData(String id){
+        SQLiteDatabase db = getWritableDatabase();
+        return db.delete(NAMA_TABLE, COL1+" = ? ",new String[]{id});
     }
 }

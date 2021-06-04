@@ -1,4 +1,4 @@
-package com.example.a10118392uts;
+package com.example.a10118392uts.utils;
 /*
  * Tanggal pengerjaan : 3 Juni 2021
  * Nim                : 10118392

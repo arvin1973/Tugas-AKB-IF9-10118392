@@ -10,9 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.10118392uts">
-        <activity android:name=".EditActivity"></activity>
-        <activity android:name=".InputActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".activity.EditActivity"></activity>
+        <activity android:name=".activity.InputActivity" />
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.example.a10118392uts;
+package com.example.a10118392uts.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.a10118392uts.R;
+
 /*
  * Tanggal pengerjaan : 2 Juni 2021
  * Nim                : 10118392

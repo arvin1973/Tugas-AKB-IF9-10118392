@@ -1,6 +1,5 @@
-package com.example.a10118392uts;
+package com.example.a10118392uts.fragment;
 
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -13,10 +12,14 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.example.a10118392uts.activity.InputActivity;
+import com.example.a10118392uts.adapter.ListViewAdapter;
+import com.example.a10118392uts.R;
+import com.example.a10118392uts.helper.SQLiteHelper;
+import com.example.a10118392uts.utils.dataCatatan;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 /*
@@ -32,6 +35,7 @@ public class CatatanFragment extends Fragment {
     private ListViewAdapter adapter;
     private ArrayList<dataCatatan> listCatatan = new ArrayList<>();
     private SQLiteHelper helper;
+    private SwipeRefreshLayout refresh;
 
     @Nullable
     @Override
@@ -40,6 +44,14 @@ public class CatatanFragment extends Fragment {
 
         fab = (FloatingActionButton) view.findViewById(R.id.fab);
         listView = (ListView)view.findViewById(R.id.list_view);
+        refresh = (SwipeRefreshLayout)view.findViewById(R.id.refresh);
+
+        refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                menampilkanData();
+            }
+        });
 
         helper = new SQLiteHelper(this.getActivity());
 
@@ -53,9 +65,10 @@ public class CatatanFragment extends Fragment {
         return view;
     }
 
-    private void menampilkanData(){
+    public void menampilkanData(){
         listCatatan.clear();
         Cursor res = helper.getDataAll();
+        refresh.setRefreshing(true);
         while (res.moveToNext()){
             String id = res.getString(0);
             String tanggal = res.getString(1);
@@ -73,6 +86,7 @@ public class CatatanFragment extends Fragment {
         adapter = new ListViewAdapter(listCatatan, getActivity());
         listView.setAdapter(adapter);
 
+        refresh.setRefreshing(false);
     }
 
 }
