@@ -1,5 +1,10 @@
 package com.example.a10118392uts.adapter;
-
+/*
+ * Tanggal pengerjaan : 4 Juni 2021
+ * Nim                : 10118392
+ * Nama               : Raden Arvin Rizky A
+ * Kelas              : IF-9
+ * */
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

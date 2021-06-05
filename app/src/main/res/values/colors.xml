@@ -7,6 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <color name="main">#C68B8B</color>
+    <color name="maindark">#f8eded</color>
+    <color name="first">#f8eded</color>
+    <color name="second">#f6dfeb</color>
+    <color name="thrid">#e4bad4</color>
+    <color name="five">#E3B5D1</color>
+    <color name="four">#FA8CD2</color>
+
     <color name="blueish">#D9F1EA</color>
     <color name="greenish">#128E6A</color>
     <color name="greenish2">#00A643</color>

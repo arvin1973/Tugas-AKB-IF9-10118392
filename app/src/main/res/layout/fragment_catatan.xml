@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D6F8DE">
+    android:background="@color/second">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
@@ -17,7 +17,6 @@
             tools:ignore="NestedScrolling" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

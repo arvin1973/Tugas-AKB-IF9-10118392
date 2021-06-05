@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/blueish">
+    android:background="@color/maindark">
 
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:text="Aplikasi"
         android:layout_marginTop="200dp"
-        android:textColor="@color/greenish"
+        android:textColor="@color/thrid"
         android:textSize="34sp"/>
 
     <ImageView
@@ -22,9 +22,9 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/ic_baseline_calendar_today_24"
-        android:backgroundTint="@color/greenish"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        app:tint="@color/thrid" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
         android:layout_gravity="center"
         android:text="Catatan Harian"
         android:layout_marginTop="30dp"
-        android:textColor="@color/greenish"
+        android:textColor="@color/thrid"
         android:textSize="34sp"/>
 
 </LinearLayout>

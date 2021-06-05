@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blueish">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/second">
 
     <LinearLayout
         android:id="@+id/logo"
@@ -18,15 +19,29 @@
             android:text="Profile"
             android:layout_gravity="center"
             android:textColor="@color/black"
+            android:layout_marginBottom="40dp"
             android:textSize="30sp"/>
 
-        <ImageView
 
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/profile"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:elevation="12dp"
+            android:id="@+id/view2"
+            app:cardCornerRadius="40dp"
+            android:layout_centerHorizontal="true"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="230dp"
+                android:src="@drawable/profile"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"/>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
@@ -37,37 +52,44 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/logo">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nim : 10118392"
-            android:layout_gravity="left"
+            android:text="10118392"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
             android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:layout_gravity="center"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama : Raden Arvin Rizky A"
-            android:layout_gravity="left"
+            android:text="Raden Arvin Rizky Arvianto"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
             android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:layout_gravity="center"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kelas : IF-9"
-            android:layout_gravity="left"
+            android:text="IF-9"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
             android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:layout_gravity="center"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Deskripsi diri : Mahasiswa Teknik Informatika "
-            android:layout_gravity="left"
+            android:text="rizki.arvin@gmail.com"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
             android:textColor="@color/black"
-            android:textSize="20sp"/>
+            android:layout_gravity="center"/>
 
 
     </LinearLayout>
