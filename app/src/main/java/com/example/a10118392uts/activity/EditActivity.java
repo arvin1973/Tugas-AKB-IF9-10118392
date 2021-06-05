@@ -60,7 +60,6 @@ public class EditActivity extends AppCompatActivity {
                             }
                         }, year, month, day);
                 picker.show();
-
             }
         });
 
